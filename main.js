@@ -25,10 +25,9 @@ function getInfo() {
             document.querySelector('h3').innerText = data.feed.description;
             document.querySelector('h2').innerText = data.items[8].title;
 
-            // Use title of the 8th item OR model from input field
             // I did my code on my own and couldn't make this part work to get my first function linked to second one and used chat gpt to find what was wrong
             const model = document.querySelector('#op').value || "Tesla_Model_S";
-            getTesla(model); 
+            getTesla(model);
         })
         .catch((err) => console.error(err));
 }
@@ -40,9 +39,12 @@ function getTesla(title) {
         .then(res => res.json())
         .then(da => {
             console.log(da);
-            
-            const imgUrl = da.originalimage?.source || da.thumbnail?.source || '';
-
+            let imgUrl = '';
+            if (da.originalimage && da.originalimage.source) {
+                imgUrl = da.originalimage.source;
+            } else if (da.thumbnail && da.thumbnail.source) {
+                imgUrl = da.thumbnail.source;
+            }
             if (imgUrl) {
                 document.querySelector('#bb').src = imgUrl;
             } else {
