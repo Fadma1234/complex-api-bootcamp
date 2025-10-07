@@ -13,7 +13,7 @@
 document.querySelector('button').addEventListener('click', getInfo);
 
 function getInfo() {
-    const info = document.querySelector('input').value;
+    // const info = document.querySelector('input').value;
     const url = `https://api.rss2json.com/v1/api.json?rss_url=https://techcrunch.com/feed/`;
 
     fetch(url)

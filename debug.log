@@ -4,3 +4,6 @@
 [1005/154850.336:ERROR:icu_util.cc(223)] Invalid file descriptor to ICU data received.
 [1005/154946.850:ERROR:icu_util.cc(223)] Invalid file descriptor to ICU data received.
 [1005/155118.267:ERROR:icu_util.cc(223)] Invalid file descriptor to ICU data received.
+[1007/125617.049:ERROR:icu_util.cc(223)] Invalid file descriptor to ICU data received.
+[1007/125621.299:ERROR:icu_util.cc(223)] Invalid file descriptor to ICU data received.
+[1007/125622.978:ERROR:icu_util.cc(223)] Invalid file descriptor to ICU data received.
